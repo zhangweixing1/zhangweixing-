@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+    <script src="../js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+    <script src="../js/jquery.jqzoom.js"></script>
+    <script src="../js/lanrenzhijia.js"></script>
+    <script src="../js/details.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="main-header">
+    <!--main-header start-->
+    <div class="main-header con">
+            <div class="w1200">
+                <!-- 币种和区域内容 -->
+                <ul class="fl nav-top">
+                    <li class="fl w90" style="padding:0 25px 0 0">
+                        <a class="down" href="#">
+                            <s class="qizhi-CNY"></s>中国
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down"  href="#">
+                                    <i class="qizhi-USD"></i>U.S.A
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-KRW"></i>한국
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-HKD"></i>HK香港
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-CNY"></i>中国
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-"></i>Other
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a class="down" href="#">
+                            ¥人民币<i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">
+                                    ¥&nbsp;
+                                    <span>人民币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    HK$&nbsp;
+                                    <span>港币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#" >
+                                    ₩&nbsp;
+                                    <span>韩币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#" >
+                                    $&nbsp;
+                                    <span>美元</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <!-- 登录 注册 个人中心 等内容 -->
+                <ul class="fr nav-top">
+                     <li class="fl appDownload">
+                        <a href="#">
+                            <i class="appIcon"></i>
+                            <span class="j-appDownload">下载手机TPS</span>
+                        </a>
+                        <a href="#">
+                            <div class="showAppCode"></div>
+                        </a>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a class="c-o" href="#">登录</a>
+                    </li>
+                    <li class="fl">|</li>
+                    <li class="fl mfr-5">
+                        <a class="c-o" href="#">注册</a>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a href="#">
+                            我的关注(<span class="wish_num">0</span>)
+                        </a>
+                    </li>
+                    <li class="fl w92 mfr-5">
+                        <a class="down" href="#">个人中心
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">我的订单
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <!--  帮助中心  -->
+                    <li class="fl w92 ">
+                        <a class="down" href="../index.html">帮助中心
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">我的工单</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    </div>
+    <!-- end site-header-->
+    <div id="site-header">
+        <div class="site-header con">
+            <div class="logo fl">
+                 <a href="../index.html">
+                    <img class="scrollStyle" src="../images/newTpsLogo.png">
+                    <img class="scrollStyle2" src="../images/newTpsLogo2.png">
+                </a>
+            </div>
+            <div class="site-header-c fl">
+                 <input  class="search-text" type="search" placeholder="请输入关键词搜索商品"/>
+                <button type="submit" target="_blank">
+                    搜索
+                </button>
+                <div class="search-hots fl">
+                    <a class="c-66 " href="#">大米</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">牙膏</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">茶叶</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">奶粉</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">面膜</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">凉鞋</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">啤酒</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">食用油</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">牛奶</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">女装</a>
+                </div>
+            </div>
+            <div class="site-header-r fl">
+                <!-- 搜索框 右边的 购物车 -->
+                <div class="header-cart">
+                    <a class="down" href="shopcar.html">
+                        <i class="pc-tps"></i>
+                        <em>购物车</em>
+                        <b class="ci-count">0</b>
+                    </a>
+                    <!-- <p class="no">购物袋中还没有商品，赶快选购吧！</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航开始 -->
+    <div class="header-wrap">
+        <div class="navwrap con">
+            <div class="nav fl">
+                <h3>全部商品分类</h3>
+                <ul class="nav-li">
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-r fl">
+                <ul class="nav-r-li">
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+    <div class="w1200">
+        <p class="crumbs">
+            <i class="pc-tps"></i>
+            <a href="#">首页 </a>&gt; 
+            <a href="#" title="美妆个护" rel="nofollow">美妆个护</a>- &gt; 
+            <a href="#" title="口腔护理" rel="nofollow">口腔护理</a>- &gt; 
+            <a href="#" title="牙膏/牙粉" rel="nofollow">牙膏/牙粉</a>-&gt; 韩国进口 LG竹盐缤纷牙膏285g*2支 全国包邮
+        </p>
+
+        <div class="goods clearfix">
+
+            <!-- 商品图片 -->
+            <div class="box clearfix">
+                <div class="lanrenzhijia">
+                <!-- 大图begin -->
+                <div id="preview" class="spec-preview"> 
+                    <span id ="jqzoon"  class="jqzoom"><img jqimg="../images/mains.jpg"  /></span> 
+                </div>
+                <!-- 大图end -->
+                <!-- 缩略图begin -->
+                <div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+                  <div class="items">
+                    <ul>
+                      <li><img bimg="" src="../images/mains.jpg" onmousemove="preview(this);"></li>
+                      <li><img bimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b2.jpg" src="http://demo.lanrenzhijia.com/2014/jd0912/images/s2.jpg" onmousemove="preview(this);"></li>
+                      <li><img bimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b3.jpg" src="http://demo.lanrenzhijia.com/2014/jd0912/images/s3.jpg" onmousemove="preview(this);"></li>
+                      <li><img bimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="http://demo.lanrenzhijia.com/2014/jd0912/images/s1.jpg" onmousemove="preview(this);"></li>
+                      <li><img bimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b3.jpg" src="http://demo.lanrenzhijia.com/2014/jd0912/images/s3.jpg" onmousemove="preview(this);"></li>
+                      <li><img bimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="http://demo.lanrenzhijia.com/2014/jd0912/images/s1.jpg" onmousemove="preview(this);"></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- <div class="tb_pic bg_loading">
+                    <span id ="jqzoon">
+                        <img src="" alt="" rel="" class="jqzoom" style="cursor: crosshair;">
+                    </span>
+                </div> -->
+
+                <!-- <div class="imageMenu">
+                    <ul>
+                        <li class="loading_small sma">
+                            <a>
+                                <img src="../images/mains.jpg" mid="../images/mains.jpg" big="big.jpg">
+                            </a>
+                        </li>
+                        <li class="loading_small ">
+                            <a>
+                                <img src="../images/mains.jpg">
+                            </a>
+                        </li>
+                        <li class="loading_small ">
+                            <a>
+                                <img src="../images/mains.jpg" mid="big.jpg" big="big.jpg">
+                            </a>
+                        </li>
+                        <li class="loading_small ">
+                            <a>
+                                <img src="../images/mains.jpg" >
+                            </a>
+                        </li>
+                        <li class="loading_small ">
+                            <a>
+                                <img src="../images/mains.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+            </div>
+            <div class="itemInfo">
+
+                <div class="tit clear">
+                    <!-- 商品 标签 -->
+                    <span class="m-y">
+                        <em>包邮</em>
+                    </span>                                         
+                    <!-- 商品名字 -->
+                    <h1>韩国进口 LG竹盐缤纷牙膏285g*2支 全国包邮</h1>
+                    <p class="fs-13 c-o"></p>
+                </div>
+                <p id="live_content" class="m-s"></p>
+                <p class="m-s">
+                    商品编码:<span class="js-sku d-ib ml-10">126795590-1</span>
+                    <span class="c-99 d-ib ml-40">原产地: 韩国</span>
+                </p>
+                <dl>
+                    <dt>价格:</dt>
+                    <dd>
+                        <b class="sys_item_price" id="shop_price">¥70.02</b>
+                        <b id="usd_shop_price">$10.17</b>
+                        <s style="margin-left: 8px;"></s>
+                    </dd>
+                    <dd></dd>
+                </dl>
+
+                <!-- 商品颜色 -->
+                
+                <!-- 商品其他 -->
+                
+                <!-- 商品大小 -->
+                
+                <!-- 商品赠品 -->
+                
+                <!-- 商品 数量库存 -->
+                <dl>
+                    <dt>数量:</dt>
+                    <form action="#" method="get" class="js-buy-now">
+                    <dd>
+                        <span class="tb-amount-widget mui-amount-wrap">
+                            <input type="hidden" value="126795590-1" name="goods_sn">
+                            <input type="text" value="1" name="quantity" class="js-number tps-text">
+                            <input type="hidden" value="" name="cloud" class="cloud">
+                            <span class="mui-amount-btn">
+                                <span class="mui-increase js-s1"> + </span>
+                                <span class="js-s2"> - </span>
+                            </span>
+                            <span class="c-99"></span>
+                        </span>
+                        <em class="c-99 ml-30">
+                        库存:<span class=" js-lanse" id="goods_number">193</span>
+                        </em>
+                    </dd>
+                    </form>
+                </dl>
+
+                <!-- 商品 发货地 -->
+                <p class="m-s">
+                    发货地:<span class="ml-10">杭州市</span>
+                </p>
+                
+                <!--   商品   立即购买   加入购物车   添加关注      -->
+                <div class="goods-cart clear">
+                    <!-- 立即购买   加入购物车 -->
+                    <span class="goods-cart-c" id="buy_button">
+                        <a class="buy js-buynow" href="#"><i class="pc-tps"></i>立即购买</a>
+                        <a class="cart js-incart" href="#"><i class="pc-tps"></i>加入购物车</a>
+                    </span>
+                    <!-- 添加关注 -->
+                    <a data-sn="126795590" data-id="121297" class="shouc js-like" href="javascript:;">
+                        <i class="pc-tps"></i>
+                        添加关注(<span class="wish_num" id="wish_goods_count">966</span>)
+                    </a>
+                    <!-- 立即购买 后的弹窗内容 -->
+                    <div class="js-confirm tjia shux clear">
+                        <ul>
+                            <li class="tt">
+                                请确认您选择的商品属性：<!-- 请确认您选择的商品属性 -->
+                            </li>
+                            <div class="js-attr"></div>
+                        </ul>
+                        <p>
+                            <a href="javascript:;" class="js-sel-ok cart">确定</a><!-- 确定 -->
+                            <a href="javascript:;" class="js-sel-cancel buy">取消</a><!-- 取消 -->
+                        </p>
+                    </div>
+                    <!-- 加入购物车 后的弹窗 -->
+                    <div class="js-check tjia clear">
+                        <p>
+                            <s></s>
+                            商品添加成功<!-- 商品添加成功 -->
+                        </p>
+                        <p>
+                            <a href="https://www.tps138.com/cart" class="incart cart">
+                                去结算<!-- 去结算 -->
+                            </a>
+                            <a href="javascript:;" class="goumai buy">
+                                继续购物<!-- 继续购物 -->
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 产品套餐信息 -->
+        
+        <!-- 商品介绍 和 商品评价 -->
+        <div class="mainCon clear">
+            <div class="w1200 goods-menu">
+                <!-- 浮动显示的商品信息 -->
+
+                <ul>
+                  <li class="on"><s class="jt"></s>商品介绍</li><!-- 商品介绍 -->
+                  <li><s class="jt"></s>商品评价</li><!-- 商品评价 -->
+                </ul>
+                <!-- <a class="cart js-incart-1" href="javascript:;"><i class="pc-tps">&#xe64c;</i></a> -->
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+</main>
+<div class="con">
+        <img src="../images/footer.png" height="454" width="100%" alt="" />
+</div>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/shopcar.css" />
+    <script src="../js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="../js/shopcar.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <div class="main-header">
+    <!--main-header start-->
+    <div class="main-header con">
+            <div class="w1200">
+                <!-- 币种和区域内容 -->
+                <ul class="fl nav-top">
+                    <li class="fl w90" style="padding:0 25px 0 0">
+                        <a class="down" href="#">
+                            <s class="qizhi-CNY"></s>中国
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down"  href="#">
+                                    <i class="qizhi-USD"></i>U.S.A
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-KRW"></i>한국
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-HKD"></i>HK香港
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-CNY"></i>中国
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    <i class="qizhi-"></i>Other
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a class="down" href="#">
+                            ¥人民币<i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">
+                                    ¥&nbsp;
+                                    <span>人民币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#">
+                                    HK$&nbsp;
+                                    <span>港币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#" >
+                                    ₩&nbsp;
+                                    <span>韩币</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="down" href="#" >
+                                    $&nbsp;
+                                    <span>美元</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <!-- 登录 注册 个人中心 等内容 -->
+                <ul class="fr nav-top">
+                     <li class="fl appDownload">
+                        <a href="#">
+                            <i class="appIcon"></i>
+                            <span class="j-appDownload">下载手机TPS</span>
+                        </a>
+                        <a href="#">
+                            <div class="showAppCode"></div>
+                        </a>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a class="c-o" href="#">登录</a>
+                    </li>
+                    <li class="fl">|</li>
+                    <li class="fl mfr-5">
+                        <a class="c-o" href="#">注册</a>
+                    </li>
+                    <li class="fl mfr-5">
+                        <a href="#">
+                            我的关注(<span class="wish_num">0</span>)
+                        </a>
+                    </li>
+                    <li class="fl w92 mfr-5">
+                        <a class="down" href="#">个人中心
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">我的订单
+                                </a>
+                            </li>
+                        </ol>
+                    </li>
+                    <!--  帮助中心  -->
+                    <li class="fl w92 ">
+                        <a class="down" href="#">帮助中心
+                            <i class="minicart_arrow"></i>
+                        </a>
+                        <ol class="xs li-b">
+                            <li>
+                                <a class="down" href="#">我的工单</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    </div>
+    <!-- end site-header-->
+    <div id="site-header">
+        <div class="site-header con">
+            <div class="logo fl">
+                 <a href="../index.html">
+                    <img class="scrollStyle" src="../images/newTpsLogo.png">
+                    <img class="scrollStyle2" src="../images/newTpsLogo2.png">
+                </a>
+            </div>
+            <div class="site-header-c fl">
+                 <input  class="search-text" type="search" placeholder="请输入关键词搜索商品"/>
+                <button type="submit" target="_blank">
+                    搜索
+                </button>
+                <div class="search-hots fl">
+                    <a class="c-66 " href="#">大米</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">牙膏</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">茶叶</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">奶粉</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">面膜</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">凉鞋</a>
+                    <b>|</b>
+                    <a class="c-66 " href="#">啤酒</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">食用油</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">牛奶</a>
+                    <b>|</b>
+                    <a class="c-66 c-o" href="#">女装</a>
+                </div>
+            </div>
+            <div class="site-header-r fl">
+                <!-- 搜索框 右边的 购物车 -->
+                <div class="header-cart">
+                    <a class="down" href="shopcar.html">
+                        <i class="pc-tps"></i>
+                        <em>购物车</em>
+                        <b class="ci-count">0</b>
+                    </a>
+                    <!-- <p class="no">购物袋中还没有商品，赶快选购吧！</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航开始 -->
+    <div class="header-wrap">
+        <div class="navwrap con">
+            <div class="nav fl">
+                <h3>全部商品分类</h3>
+                <ul class="nav-li">
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cc">
+                        <a href="#">母婴用品</a>
+                        <div class="dowr">
+                            <ul>
+                                 <li>1</li>
+                                 <li>1</li>
+                                 <li>1</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-r fl">
+                <ul class="nav-r-li">
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                    <li><a href="#">商品首页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="w1200 m-h-430">
+    <!-- start of 购物车 -->
+    <div class="MyCart img100" style="position:relative">
+        <!-- 全部商品标头 -->
+        <p class="switch-cart">
+            <em>全部商品</em>
+            <span id="cart_item_num">0</span>
+        </p>
+        <div class="box-bd">
+            <dl class="clear">
+                <!-- 表首行标题 -->
+                <dt class="clear" style="border-bottom: none;">
+                    <span class="col-md-1">
+                        <span class="col-md-3">&nbsp;</span>
+                        <span class="col-md-9">
+                            <div class="" id="u2" data-label="全选">
+                                <input class="select_all" type="checkbox" value="">全选
+                            </div>
+                        </span>
+                    </span>
+                    <span class="col-md-3"><span class="P_left">商品名称</span></span>
+                    <span class="col-md-1 tc">属性</span>
+                    <span class="col-md-2 tc">单价</span>
+                    <span class="col-md-2 tc">数量</span>
+                    <span class="col-md-2 tc">小记</span>
+                    <span class="col-md-1 tc">操作</span>
+                </dt>
+            </dl>
+
+
+                        
+
+            <dl class="clear">
+                <dd class="clear">
+                    <div class="col-md-12">
+                        <div class="col-md-1">
+                            <div class="col-md-3">&nbsp;</div>
+                            <span>
+                            <input class="select_all" type="checkbox" value="">全选
+                            </span>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="col-md-3">
+                            <a href="javascript:void(0)" class="remove_checked">删除选中的商品</a>
+                            </span>
+                            <span>
+                            <a href="javascript:void(0)" class="move_wish" style="display: none;">移到我的关注</a>
+                            </span>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl class="clear">
+                <dd class="clear">
+                    <div class="jies">
+
+                    <ul id="cart">
+                        <li>
+                            <p class="good_check"><input type="checkbox" name="good" value="" /></p>
+                            <p class="good_name">西瓜</p>
+                            <p class="good_price">￥&nbsp;99.99</p>
+                            <p class="num">
+                                <span class="cutnum">-</span>
+                                <input class="nownum" type="text" value="1" />
+                                <span class="addnum">+</span>
+                            </p>
+                            <p class="good_total">￥&nbsp;99.99</p>
+                            <p class="good_del">
+                                <a href="javascript:;">删除</a>
+                            </p>
+                        </li>
+                    </ul>
+                        <!-- 总价 -->
+                        <p>
+                            共 <span id="cart_count">0</span> 件商品 总价（不含运费）：<b class="cse">¥0.00<span class="usaMoney">$0.00</span></b>
+                        </p>
+                        <p class="jies-coupons" style="display: none">
+                            优惠券：
+                            <select>
+                                <!-- <option value="0">不使用优惠券</option> -->
+                            </select>
+                        </p>
+                        <p class="jies-coupons-sf" style="display: none">
+                            实付金额：<b class="ccse">$0.00</b>
+                        </p>
+                        <p id="total_save"></p>
+                        <p>
+                            <a class="btn_Bhui btn_check_out" href="javascript:void(0);">立即结算</a>
+                        </p>
+                    </div>
+                </dd>
+            </dl>
+
+        </div>
+
+        <!--结算弹框 start-->
+                <!--end 结算弹框-->
+
+    </div>
+    <!-- end of 购物车 -->
+
+     <div class="con">
+        <img src="../images/footer.png" height="454" width="100%" alt="" />
+    </div>
+</div>
+</body>
+</html>
