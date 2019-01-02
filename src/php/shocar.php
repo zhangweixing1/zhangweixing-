@@ -1,4 +1,5 @@
 <?php
+    $yes = isset($_GET["yes"])?$_GET["yes"]:null;
     $pice = isset($_GET["pice"])?$_GET["pice"]:null;
     $pices = isset($_GET["pices"])?$_GET["pices"]:null;
     $img = isset($_GET["img"])?$_GET["img"]:null;
@@ -20,6 +21,25 @@
     // echo  $conn;
     //2.查询前设置编码，防止输出乱码
     $conn->set_charset('utf8');
+
+    $res = $conn->query('select qty from ureshop where idx="'.$idx.'" and zhanghao="'.$zhanghao.'"');
+    if($res->num_rows > 0){
+        $qtyp = $res->fetch_all(MYSQLI_ASSOC);
+        $qtyn = $qty+$qtyp[0]["qty"];
+        $res2 = $conn->query('update ureshop set qty = "'.$qtyn.'" where idx = '.$idx.' and zhanghao="'.$zhanghao.'"');
+    }else if($yes){
+        $ress = $conn->query('select * from ureshop where zhanghao="'.$zhanghao.'"');
+        $content = $ress->fetch_all(MYSQLI_ASSOC);
+        $ress->close();
+        $conn->close();
+         echo json_encode($content,JSON_UNESCAPED_UNICODE);
+
+    }else{
+        $res2 = $conn->query('insert into ureshop (pice,pices,img,qty,zhanghao,shops,idx) values("'.$pice.'","'.$pices.'","'.$img.'","'.$qty.'","'.$zhanghao.'","'.$shops.'","'.$idx.'")');
+    }
+
+
+
     // var_dump("成功");
     //3.书写语句，执行语句
     //  执行语句的代码： $res = $conn->query()    
@@ -32,14 +52,14 @@
     // 4.若是查询语句，记得释放查询结果集，避免资源浪费
     // 5.关闭数据库
     // echo 6666;
-    $res = $conn -> query('insert into ureshop (pice,pices,img,qty,zhanghao,shops,idx) values("'.$pice.'","'.$pices.'","'.$img.'","'.$qty.'","'.$zhanghao.'","'.$shops.'","'.$idx.'")');
+    // $res = $conn -> query('insert into ureshop (pice,pices,img,qty,zhanghao,shops,idx) values("'.$pice.'","'.$pices.'","'.$img.'","'.$qty.'","'.$zhanghao.'","'.$shops.'","'.$idx.'")');
+    // // var_dump($res);
+    // $res = $conn -> query('select * from ureshop');
     // var_dump($res);
-    $res = $conn -> query('select * from ureshop');
-    // var_dump($res);
-    $content = $res->fetch_all(MYSQLI_ASSOC);
+    // $content = $res->fetch_all(MYSQLI_ASSOC);
     // $res->close();
     // $conn->close();
-     echo json_encode($content,JSON_UNESCAPED_UNICODE);
+    
 
 
 

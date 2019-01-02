@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded",function(){
             var pice = shuzu.pice;
             var pices = shuzu.pices;
             var idx = data.id;
+            console.log(data.id);
             var qty =  zhi.value;
             // var prices = shuzu.pice;
             cart.onclick = function(){

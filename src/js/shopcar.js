@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded",function(){
     var jia = document.getElementsByClassName("addnum")[0];
     var zhi = document.getElementsByClassName("nownum")[0];
     console.log(zhi);
-
+ var zhanghao = Cookie.getCookie("goodslist");
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
+       
 
         if(xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 304)){
             var car =JSON.parse(xhr.responseText);
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
             liBiao.innerHTML = xuanran(car);
         }
     }
-     xhr.open("get","../php/shocar.php",true);
+     xhr.open("get","../php/shocar.php?yes=true&zhanghao="+zhanghao,true);
      xhr.send(null);
 
 
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded",function(){
     function xuanran(a){
         var str = "";
          a.map(function(item){
+            console.log(item);
             str +=`
                 <ul>
                     <li>
