@@ -32,7 +32,7 @@
         $content = $ress->fetch_all(MYSQLI_ASSOC);
         $ress->close();
         $conn->close();
-         echo json_encode($content,JSON_UNESCAPED_UNICODE);
+        echo json_encode($content,JSON_UNESCAPED_UNICODE);
 
     }else{
         $res2 = $conn->query('insert into ureshop (pice,pices,img,qty,zhanghao,shops,idx) values("'.$pice.'","'.$pices.'","'.$img.'","'.$qty.'","'.$zhanghao.'","'.$shops.'","'.$idx.'")');
