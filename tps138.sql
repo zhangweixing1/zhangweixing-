@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-12-29 15:57:01
+Date: 2019-01-02 11:13:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -71,23 +71,6 @@ INSERT INTO `list` VALUES ('37', '甘露天使 全屋健水器 简单小巧 功�
 INSERT INTO `list` VALUES ('38', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '3993', '580.18', '../images/mains.jpg');
 
 -- ----------------------------
--- Table structure for shopcar
--- ----------------------------
-DROP TABLE IF EXISTS `shopcar`;
-CREATE TABLE `shopcar` (
-  `id` int(16) unsigned NOT NULL AUTO_INCREMENT,
-  ` uname` varchar(255) NOT NULL,
-  `unitp` varchar(255) NOT NULL,
-  `nums` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of shopcar
--- ----------------------------
-INSERT INTO `shopcar` VALUES ('1', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '3993', '1');
-
--- ----------------------------
 -- Table structure for shouye
 -- ----------------------------
 DROP TABLE IF EXISTS `shouye`;
@@ -98,7 +81,7 @@ CREATE TABLE `shouye` (
   `img` varchar(255) NOT NULL,
   `datas` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shouye
@@ -124,6 +107,32 @@ INSERT INTO `shouye` VALUES ('18', '虎牌（Tiger） 保温杯原装进口水�
 INSERT INTO `shouye` VALUES ('19', '虎牌（Tiger） 保温杯原装进口水杯MJA-A048 5种颜色 498ml 全国包邮', '524.61', 'images/main.jpg', '2019/1/7');
 INSERT INTO `shouye` VALUES ('20', '虎牌（Tiger） 保温杯原装进口水杯MJA-A048 5种颜色 499ml 全国包邮', '524.61', 'images/main.jpg', '2019/1/8');
 INSERT INTO `shouye` VALUES ('21', '虎牌（Tiger） 保温杯原装进口水杯MJA-A048 5种颜色 500ml 全国包邮', '524.61', 'images/main.jpg', '2019/1/9');
+INSERT INTO `shouye` VALUES ('22', 'jshdj', '33.00', '44', '22');
+
+-- ----------------------------
+-- Table structure for ureshop
+-- ----------------------------
+DROP TABLE IF EXISTS `ureshop`;
+CREATE TABLE `ureshop` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `pice` varchar(255) NOT NULL,
+  `pices` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `qty` int(222) NOT NULL,
+  `zhanghao` varchar(255) NOT NULL,
+  `shops` varchar(255) NOT NULL,
+  `idx` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ureshop
+-- ----------------------------
+INSERT INTO `ureshop` VALUES ('15', '3993', '580.18', '../images/mains.jpg', '1', '12345', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '2');
+INSERT INTO `ureshop` VALUES ('16', '39', '580.18', '../images/mains.jpg', '1', '12345', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '3');
+INSERT INTO `ureshop` VALUES ('17', '3993', '435', '../images/mains.jpg', '1', '12345', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '1');
+INSERT INTO `ureshop` VALUES ('18', '3993', '435', '../images/mains.jpg', '1', '12345', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '1');
+INSERT INTO `ureshop` VALUES ('19', '3993', '435', '../images/mains.jpg', '1', '12345', '甘露天使 全屋健水器 简单小巧 功能强大 经久耐用 物美价廉 1台', '1');
 
 -- ----------------------------
 -- Table structure for zhuce
