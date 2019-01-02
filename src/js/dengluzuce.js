@@ -42,7 +42,12 @@ document.addEventListener("DOMContentLoaded",function(){
                 }
                 if(xhr.responseText == "成功"){
                     if(ccc.value == vcode.innerHTML){
+                        console.log(555);
                         // alert("登录成功");
+                        var ss = uname.value;
+                        var d = new Date();
+                        d.setDate(d.getDate()+7);
+                        Cookie.setCookie("goodslist",ss,d,"/");
                         location.href = "../index.html";
                     }else{
                         code.innerHTML = "验证码不正确";

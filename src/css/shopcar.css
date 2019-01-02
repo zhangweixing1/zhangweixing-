@@ -277,9 +277,9 @@ dd.clear{padding:10px;}
     text-align: start;
     font: 400 13.3333px Arial;
 }
-.good_name{width: 32px;height: 21px;display:inline-block;margin:10px 10px 10px 64px;}
-.good_price{width: 62px;height: 12px;display:inline-block;margin:10px 10px 10px 325px;}
-.num{height:28px;width:194px;display:inline-block;}
+.good_name{width: 250px;height: 21px;display:inline-block;margin:10px 10px 10px 67px;}
+.good_price{width: 62px;height: 12px;display:inline-block;margin:10px 10px 10px 119px;}
+.num{height:28px;width:194px;display:inline-block;margin-left: 100px;}
 .nownum{width:50px;height:21px;border:1px solid #ccc;}
 .cutnum{
     display: inline-block;
@@ -302,6 +302,20 @@ dd.clear{padding:10px;}
 }
 
 
-.good_total{width: 62px;height: 12px;display:inline-block;margin:10px 10px 10px 117px;}
+.good_total{width: 62px;height: 12px;display:inline-block;margin:10px 10px 10px 10px;}
 
 .good_del{display:inline-block;width: 32px;height: 21px;margin:10px 10px 10px 139px;}
+
+.MyCart .box-bd dd {
+    padding: 10px;
+    color: #333;
+    border-bottom: dotted 1px #ccc;
+}
+.discount-type {
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #E0E9F6;
+}
+
+.good_check{display:inline-block;width: 20px;height: 20px;padding-left: 25px;position:relative;top:-15px;left:0px;}
+

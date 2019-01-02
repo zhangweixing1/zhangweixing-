@@ -452,8 +452,6 @@ p.b-q b {
 }
 
 
-.datalist{border:1px solid #ddd;padding:15px;}
-        .datalist li{padding:15px 5px;border-bottom:1px dotted #ccc;}
-        .datalist li h4{margin:0;}
+        
         .page span{display:inline-block;margin:5px;width:40px;line-height:1.8;text-align: center;background-color:#dfdfdf;color:#666;}
         .page span.active{background-color:#fc0;color:#fff;}

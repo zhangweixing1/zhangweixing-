@@ -1,4 +1,14 @@
 <?php
+    $pice = isset($_GET["pice"])?$_GET["pice"]:null;
+    $pices = isset($_GET["pices"])?$_GET["pices"]:null;
+    $img = isset($_GET["img"])?$_GET["img"]:null;
+    $qty = isset($_GET["qty"])?$_GET["qty"]:null;
+    $idx = isset($_GET["idx"])?$_GET["idx"]:null;
+    $zhanghao = isset($_GET["zhanghao"])?$_GET["zhanghao"]:null;
+    $shops = isset($_GET["shops"])?$_GET["shops"]:null;
+
+
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -22,12 +32,13 @@
     // 4.若是查询语句，记得释放查询结果集，避免资源浪费
     // 5.关闭数据库
     // echo 6666;
-    $res = $conn -> query('insert into shopcar (uname,unitp,nums) values("'jshdj'",3993,1)')
-    $res = $conn -> query('select * from shopcar');
+    $res = $conn -> query('insert into ureshop (pice,pices,img,qty,zhanghao,shops,idx) values("'.$pice.'","'.$pices.'","'.$img.'","'.$qty.'","'.$zhanghao.'","'.$shops.'","'.$idx.'")');
+    // var_dump($res);
+    $res = $conn -> query('select * from ureshop');
     // var_dump($res);
     $content = $res->fetch_all(MYSQLI_ASSOC);
-    $res->close();
-    $conn->close();
+    // $res->close();
+    // $conn->close();
      echo json_encode($content,JSON_UNESCAPED_UNICODE);
 
 

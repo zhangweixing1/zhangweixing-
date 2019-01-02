@@ -1,4 +1,9 @@
 <?php
+    $qty = isset($_GET["qty"])? $_GET["qty"]: 5;
+    $currentPage = isset($_GET["currentPage"])? $_GET["currentPage"]: 1;
+
+
+
     $fff = isset($_GET["fff"])?$_GET["fff"]:null;
     $servername = "localhost";
     $username = "root";
@@ -23,7 +28,7 @@
     // 4.若是查询语句，记得释放查询结果集，避免资源浪费
     // 5.关闭数据库
     // echo 6666;
-    // var_dump($fff);
+    // var_dump($qty,$currentPage);
 
      if($fff){
      if($fff=="true"){
@@ -33,13 +38,14 @@
             $res->close();
             $conn->close();
             // echo 666;
-            echo json_encode($content,JSON_UNESCAPED_UNICODE);
+            $content = json_encode($content,JSON_UNESCAPED_UNICODE);
+         
         }else if($fff=="false"){
             $ras = $conn->query('select * from list order by pice asc');
             $content = $ras->fetch_all(MYSQLI_ASSOC);
             $ras->close();
             $conn->close();
-            echo json_encode($content,JSON_UNESCAPED_UNICODE);
+            $content = json_encode($content,JSON_UNESCAPED_UNICODE);
             // echo 777;
         }
     }else{
@@ -48,9 +54,24 @@
     $content = $res->fetch_all(MYSQLI_ASSOC);
     // $res->close();
     // $conn->close();
-     echo json_encode($content,JSON_UNESCAPED_UNICODE);
+    $content =  json_encode($content,JSON_UNESCAPED_UNICODE);
+     // 2.将json字符串转成数组（获取数组的长度）,裁剪出需要的当前页的内容。
+    
+
 
     }
+
+
+   $content = json_decode($content,true);
+    $len = count($content);
+    $data = array_slice($content,($currentPage-1)*$qty,$qty);
+    $res = array(
+        "data" => $data,
+        "len" => $len,
+        "qty" => $qty,
+        "currentPage" => $currentPage
+    );
+    echo json_encode($res,JSON_UNESCAPED_UNICODE);
 
 
 

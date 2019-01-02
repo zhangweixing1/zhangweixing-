@@ -324,8 +324,32 @@
             </dl>
 
 
-                        
+            <dl class="clear">
+                <dd class="discount-type">
+                    <!-- <input class="select_all" type="checkbox" value="0" > -->
+                    普通商品
+                </dd>
+                <dd class="clear cart_items" id="liebiao">
+                     <ul>
+                    <li>
+                        <p class="good_check"><input type="checkbox" name="good" value="" /></p>
+                        <p class="good_name" style="overflow:hidden;">${item.shops}</p>
+                        <p class="good_price">￥&nbsp;${item.pice}</p>
+                        <p class="num">
+                            <span class="cutnum" id="cutnum">-</span>
+                            <input class="nownum" type="text" value="${item.qty}" />
+                            <span class="addnum">+</span>
+                        </p>
+                        <p class="good_total">￥&nbsp;${item.pice}</p>
+                        <p class="good_del">
+                            <a href="javascript:;">删除</a>
+                        </p>
+                    </li>
 
+                    </ul>
+                </dd>
+            </dl>
+           
             <dl class="clear">
                 <dd class="clear">
                     <div class="col-md-12">
@@ -347,26 +371,13 @@
                 </dd>
             </dl>
 
+
+
+
+
             <dl class="clear">
                 <dd class="clear">
                     <div class="jies">
-
-                    <ul id="cart">
-                        <li>
-                            <p class="good_check"><input type="checkbox" name="good" value="" /></p>
-                            <p class="good_name">西瓜</p>
-                            <p class="good_price">￥&nbsp;99.99</p>
-                            <p class="num">
-                                <span class="cutnum">-</span>
-                                <input class="nownum" type="text" value="1" />
-                                <span class="addnum">+</span>
-                            </p>
-                            <p class="good_total">￥&nbsp;99.99</p>
-                            <p class="good_del">
-                                <a href="javascript:;">删除</a>
-                            </p>
-                        </li>
-                    </ul>
                         <!-- 总价 -->
                         <p>
                             共 <span id="cart_count">0</span> 件商品 总价（不含运费）：<b class="cse">¥0.00<span class="usaMoney">$0.00</span></b>
