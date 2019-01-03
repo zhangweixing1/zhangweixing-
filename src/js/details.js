@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded",function(){
+    var cookies = Cookie.getCookie("goodslist");
+    var ssr = document.getElementById("ssr");
+    ssr.innerHTML= "欢迎"+cookies;
+    console.log(cookies);
+
     // var jqzoom = document.querySelector(".jqzoom")[0];
     var jqzoom = document.getElementById("jqzoom");
     var name = document.getElementsByTagName("h1")[0];
@@ -28,7 +33,7 @@ document.addEventListener("DOMContentLoaded",function(){
             }
             jqzoon.innerHTML =`<img src="${shuzu.img}">`;
             name.innerHTML =`${shuzu.uname}`;
-            price.innerHTML =`¥${shuzu.pice}`;
+            price.innerHTML =`￥${shuzu.pice}`;
             prices.innerHTML =`$${shuzu.pices}`;
 
 
@@ -75,10 +80,15 @@ document.addEventListener("DOMContentLoaded",function(){
     zhi.value = _zhi;
     }
     jian.onclick = function (){
-        var _zhi = zhi.value;
-        _zhi--;
-    // console.log(_zhi);
-    zhi.value = _zhi;
+        if(zhi.value <= 1){
+            zhi.value == 1
+        }else {
+            var _zhi = zhi.value;
+            _zhi--;
+            // console.log(_zhi);
+            zhi.value = _zhi;
+        }
+      
     }
     
 

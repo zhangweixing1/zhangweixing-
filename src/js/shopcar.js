@@ -31,7 +31,12 @@ document.addEventListener("DOMContentLoaded",function(){
             xhr1.onreadystatechange = function(){
                 if(xhr1.readyState == 4 && (xhr1.status == 200 || xhr1.status == 304)){
                 var  jia = JSON.parse(xhr1.responseText);
-                liBiao.innerHTML = xuanran(jia);
+                console.log(jia);
+                var ss = e.target.parentElement.previousElementSibling.innerHTML.slice(7);
+                e.target.parentElement.nextElementSibling.innerHTML= "￥"+ss*jia;
+                e.target.previousElementSibling.value = jia;
+                // $(".nownum").val(jia);
+                // liBiao.innerHTML = xuanran(jia);
                 }
             } 
             xhr1.open("get","../php/shocar1.php?shop=true&idx="+idx+"&zhanghao="+zhanghao,true);
@@ -39,23 +44,63 @@ document.addEventListener("DOMContentLoaded",function(){
             // location.reload();
         }else if(e.target.className == "cutnum"){
            var idx = e.target.parentElement.parentElement.getAttribute("idx");
-           var xhr2 = new XMLHttpRequest()
-            xhr1.onreadystatechange = function(){
-                if(xhr2.readyState == 4 && (xhr2.status == 200 || xhr2.status == 304)){
-                var  jian = JSON.parse(xhr2.responseText);
-                
-                liBiao.innerHTML = xuanran(jian);
+           if(e.target.nextElementSibling.value == 1){
+                e.target.nextElementSibling.value = 1;
+           }else{
+               var xhr2 = new XMLHttpRequest()
+                xhr2.onreadystatechange = function(){
+                    if(xhr2.readyState == 4 && (xhr2.status == 200 || xhr2.status == 304)){
+                    var  jian = JSON.parse(xhr2.responseText);
+                        console.log(jian);
+                        var ss = e.target.parentElement.previousElementSibling.innerHTML.slice(7);
+                        e.target.parentElement.nextElementSibling.innerHTML= "￥"+ss*jian;
+                        e.target.nextElementSibling.value = jian;
+                    }
+                } 
+                xhr2.open("get","../php/shocar1.php?shoph=true&idx="+idx+"&zhanghao="+zhanghao,true);
+                xhr2.send(null);
+           }
+        }else if(e.target.tagName == "A"){
+               var xhr3 = new XMLHttpRequest()
+            var idx = e.target.parentElement.parentElement.getAttribute("idx");
+            xhr3.onreadystatechange = function(){
+                if(xhr3.readyState == 4 && (xhr3.status == 200 || xhr3.status == 304)){
+                var  jian = xhr3.responseText;
+                    console.log(jian);
                 }
             } 
-            xhr2.open("get","../php/shocar1.php?shop=true&idx="+idx+"&zhanghao="+zhanghao,true);
-            xhr2.send(null);
+            xhr3.open("get","../php/shocar1.php?shophs=true&idx="+idx+"&zhanghao="+zhanghao,true);
+            xhr3.send(null);
+
+           e.target.parentElement.parentElement.parentElement.remove(e.target.parentElement.parentElement);
+
         }
 
-     }
+    }
 
-
-
-
+//全选商品
+    var all = document.querySelector(".select_all");
+    var goods = document.getElementsByName("good");
+    all.onclick=function(){
+        for(var i=0 ;i<goods.length;i++){
+            goods[i].checked = all.checked;
+            goods[i].onclick = function(){
+                all.checked = isCheckAll();
+            }
+        }
+    }
+    function isCheckAll(){
+        // 假设goods全部勾选
+        var res = true;
+        for(var i=0;i<goods.length;i++){
+            if(!goods[i].checked){
+                res = false;
+                break;
+            }
+        }
+        return res;
+    }
+//清空所有商品
 
 
 

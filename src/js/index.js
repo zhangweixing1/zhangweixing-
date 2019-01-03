@@ -88,15 +88,13 @@
                 focus.appendChild(page);
                 return page;
             }
-
-
             $(".hotLi")
-            // console.log($(".hotLi"))
-            
-
-
         })
  document.addEventListener("DOMContentLoaded",function(){
+    var cookies = Cookie.getCookie("goodslist");
+    var ssr = document.getElementById("ssr");
+    ssr.innerHTML= "欢迎"+cookies;
+    console.log(cookies);
     var hotLi = document.getElementsByClassName("hotLi")[0];
     var xhr = new XMLHttpRequest();
     var str = "";
@@ -105,7 +103,6 @@
                         var paijiang = JSON.parse(xhr.responseText);
                         // console.log(xhr.responseText);
                         xuanran(paijiang);
-                        console.log(str);
             hotLi.innerHTML = str;
                     }
                 }

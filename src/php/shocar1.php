@@ -1,6 +1,8 @@
 <?php
     $idx = isset($_GET["idx"])?$_GET["idx"]:null;
     $shop = isset($_GET["shop"])?$_GET["shop"]:null;
+    $shoph = isset($_GET["shoph"])?$_GET["shoph"]:null;
+    $shophs = isset($_GET["shophs"])?$_GET["shophs"]:null;
     $zhanghao = isset($_GET["zhanghao"])?$_GET["zhanghao"]:null;
 
 
@@ -27,6 +29,21 @@
          // var_dump($qtyn);
 
         $res2 = $conn->query('update ureshop set qty = "'.$qtyn.'" where id = '.$idx.' and zhanghao="'.$zhanghao.'"');
+        echo $qtyn;
+    }else if($shoph){
+        $qtyp = $res->fetch_all(MYSQLI_ASSOC);
+
+       
+        $qtyn = $qtyp[0]["qty"]-1;
+         // var_dump($qtyn);
+
+        $res2 = $conn->query('update ureshop set qty = "'.$qtyn.'" where id = '.$idx.' and zhanghao="'.$zhanghao.'"');
+        echo $qtyn;
+
+    }else if($shophs){
+        $res2 = $conn->query('delete from ureshop where id="'.$idx.'"');
+        echo "删除成功";
+
     }
     // else{
     //     $qtyp = $res->fetch_all(MYSQLI_ASSOC);
